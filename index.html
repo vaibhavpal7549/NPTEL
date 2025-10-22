@@ -9,11 +9,27 @@
 <body>
     <div class="container">
         <header>
-            <h1>NPTEL Management Information System</h1>
-            <h2>Quiz Practice Test</h2>
+            <h1>NPTEL Quiz Practice Platform</h1>
+            <h2>Test Your Knowledge</h2>
         </header>
 
-        <div class="mode-selection" id="modeSelection">
+        <div class="course-selection" id="courseSelection">
+            <h3>Select Course</h3>
+            <div class="course-buttons">
+                <button class="course-btn" onclick="selectCourse('mis')">
+                    <span class="icon">💼</span>
+                    <span>Management Information System</span>
+                    <small>MIS Quiz Practice</small>
+                </button>
+                <button class="course-btn" onclick="selectCourse('ebusiness')">
+                    <span class="icon">🌐</span>
+                    <span>E-Business</span>
+                    <small>E-Business Quiz Practice</small>
+                </button>
+            </div>
+        </div>
+
+        <div class="mode-selection" id="modeSelection" style="display: none;">
             <h3>Select Quiz Mode</h3>
             <div class="mode-buttons">
                 <button class="mode-btn" onclick="selectMode('all')">
@@ -27,6 +43,7 @@
                     <small>Practice by week</small>
                 </button>
             </div>
+            <button class="back-btn" onclick="backToCourse()">← Back to Courses</button>
         </div>
 
         <div class="week-selection" id="weekSelection" style="display: none;">
@@ -78,6 +95,7 @@
                         <div class="button-group">
                             <button class="nav-btn prev-btn" id="prevBtn" onclick="previousQuestion()">← Previous</button>
                             <button class="mark-review-btn" id="markReviewBtn" onclick="markForReview()">Mark for Review</button>
+                            <button class="check-answer-btn" id="checkAnswerBtn" onclick="checkAnswer()">Check Answer</button>
                             <button class="clear-btn" id="clearBtn" onclick="clearResponse()">Clear Response</button>
                             <button class="nav-btn next-btn" id="nextBtn" onclick="nextQuestion()">Next →</button>
                         </div>
@@ -143,7 +161,8 @@
         </div>
     </div>
 
-    <script src="data.js"></script>
+    <script src="mis_data.js"></script>
+    <script src="ebusiness_data.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

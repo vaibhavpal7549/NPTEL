@@ -1,3 +1,4 @@
+let currentCourse = '';
 let currentMode = '';
 let currentWeek = null;
 let currentQuestionIndex = 0;
@@ -8,14 +9,21 @@ let userAnswers = [];
 let questions = [];
 let questionStatus = []; // 'not-visited', 'not-answered', 'answered', 'marked'
 
+function selectCourse(course) {
+    currentCourse = course;
+    document.getElementById('courseSelection').style.display = 'none';
+    document.getElementById('modeSelection').style.display = 'block';
+}
+
 function selectMode(mode) {
     currentMode = mode;
     document.getElementById('modeSelection').style.display = 'none';
     
     if (mode === 'all') {
         questions = [];
-        for (let week in quizData) {
-            questions = questions.concat(quizData[week].map((q, idx) => ({
+        const dataSource = currentCourse === 'mis' ? mis_data : eBusinessData;
+        for (let week in dataSource) {
+            questions = questions.concat(dataSource[week].map((q, idx) => ({
                 ...q,
                 week: week,
                 originalIndex: idx
@@ -31,7 +39,8 @@ function selectMode(mode) {
 
 function startQuiz(week) {
     currentWeek = week;
-    questions = quizData[week].map((q, idx) => ({
+    const dataSource = currentCourse === 'mis' ? mis_data : eBusinessData;
+    questions = dataSource[week].map((q, idx) => ({
         ...q,
         week: week,
         originalIndex: idx
@@ -204,6 +213,40 @@ function clearResponse() {
     document.getElementById('scoreDisplay').textContent = `Answered: ${answeredCount}/${totalQuestions}`;
 }
 
+function checkAnswer() {
+    const question = questions[currentQuestionIndex];
+    const correctAnswer = question.correct;
+    const userAnswer = userAnswers[currentQuestionIndex];
+    
+    // Show feedback with correct answer
+    const feedback = document.getElementById('feedback');
+    const feedbackText = document.getElementById('feedbackText');
+    
+    if (userAnswer === null) {
+        feedback.className = 'feedback wrong';
+        feedbackText.textContent = `⚠ Not Answered | Correct answer: ${correctAnswer}`;
+    } else if (userAnswer === correctAnswer) {
+        feedback.className = 'feedback correct';
+        feedbackText.textContent = '✓ You answered correctly!';
+    } else {
+        feedback.className = 'feedback wrong';
+        feedbackText.textContent = `✗ Your answer: ${userAnswer} | Correct answer: ${correctAnswer}`;
+    }
+    
+    feedback.style.display = 'block';
+    
+    // Highlight the correct answer in the options
+    const options = document.querySelectorAll('.option');
+    options.forEach((option, index) => {
+        const optionText = option.querySelector('.option-text').textContent;
+        if (optionText === correctAnswer) {
+            option.classList.add('correct');
+        } else if (userAnswer && optionText === userAnswer && userAnswer !== correctAnswer) {
+            option.classList.add('wrong');
+        }
+    });
+}
+
 function submitQuiz() {
     const answeredCount = userAnswers.filter(a => a !== null).length;
     const unansweredCount = totalQuestions - answeredCount;
@@ -255,7 +298,8 @@ function showResults() {
 
 function restartQuiz() {
     document.getElementById('resultsContainer').style.display = 'none';
-    document.getElementById('modeSelection').style.display = 'block';
+    document.getElementById('courseSelection').style.display = 'block';
+    currentCourse = '';
     currentMode = '';
     currentWeek = null;
     currentQuestionIndex = 0;
@@ -330,6 +374,7 @@ function loadReviewQuestion() {
     // Hide action buttons and show navigation only
     document.getElementById('markReviewBtn').style.display = 'none';
     document.getElementById('clearBtn').style.display = 'none';
+    document.getElementById('checkAnswerBtn').style.display = 'none';
     
     document.getElementById('prevBtn').disabled = currentQuestionIndex === 0;
     document.getElementById('prevBtn').onclick = () => {
@@ -359,13 +404,19 @@ function backToMode() {
     document.getElementById('modeSelection').style.display = 'block';
 }
 
+function backToCourse() {
+    document.getElementById('modeSelection').style.display = 'none';
+    document.getElementById('courseSelection').style.display = 'block';
+}
+
 function backToModeFromQuiz() {
     const confirmExit = confirm('Are you sure you want to exit? Your progress will be lost.');
     if (confirmExit) {
         document.getElementById('quizContainer').style.display = 'none';
-        document.getElementById('modeSelection').style.display = 'block';
+        document.getElementById('courseSelection').style.display = 'block';
         
         // Reset everything
+        currentCourse = '';
         currentMode = '';
         currentWeek = null;
         currentQuestionIndex = 0;
@@ -380,5 +431,6 @@ function backToModeFromQuiz() {
         document.getElementById('questionPalette').style.display = 'block';
         document.getElementById('markReviewBtn').style.display = 'inline-block';
         document.getElementById('clearBtn').style.display = 'inline-block';
+        document.getElementById('checkAnswerBtn').style.display = 'inline-block';
     }
 }

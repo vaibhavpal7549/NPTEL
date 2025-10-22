@@ -1,4 +1,4 @@
-const quizData = {
+const mis_data = {
     1: [
         {
             question: "What is an Information System?",
