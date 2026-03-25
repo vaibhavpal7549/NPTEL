@@ -9,6 +9,13 @@ let userAnswers = [];
 let questions = [];
 let questionStatus = []; // 'not-visited', 'not-answered', 'answered', 'marked'
 
+function getCurrentCourseData() {
+    if (currentCourse === 'mis') return mis_data;
+    if (currentCourse === 'ebusiness') return eBusinessData;
+    if (currentCourse === 'leadership') return leadershipTeamEffectivenessData;
+    return null;
+}
+
 function selectCourse(course) {
     currentCourse = course;
     document.getElementById('courseSelection').style.display = 'none';
@@ -18,10 +25,16 @@ function selectCourse(course) {
 function selectMode(mode) {
     currentMode = mode;
     document.getElementById('modeSelection').style.display = 'none';
+    const dataSource = getCurrentCourseData();
+    
+    if (!dataSource) {
+        alert('Course data not found.');
+        backToCourse();
+        return;
+    }
     
     if (mode === 'all') {
         questions = [];
-        const dataSource = currentCourse === 'mis' ? mis_data : eBusinessData;
         for (let week in dataSource) {
             questions = questions.concat(dataSource[week].map((q, idx) => ({
                 ...q,
@@ -29,6 +42,13 @@ function selectMode(mode) {
                 originalIndex: idx
             })));
         }
+        
+        if (questions.length === 0) {
+            alert('No questions available for this course yet.');
+            backToCourse();
+            return;
+        }
+        
         totalQuestions = questions.length;
         currentWeek = 'All Weeks';
         initializeQuiz();
@@ -39,7 +59,13 @@ function selectMode(mode) {
 
 function startQuiz(week) {
     currentWeek = week;
-    const dataSource = currentCourse === 'mis' ? mis_data : eBusinessData;
+    const dataSource = getCurrentCourseData();
+    
+    if (!dataSource || !Array.isArray(dataSource[week]) || dataSource[week].length === 0) {
+        alert(`Week ${week} questions are not available for this course yet.`);
+        return;
+    }
+    
     questions = dataSource[week].map((q, idx) => ({
         ...q,
         week: week,
