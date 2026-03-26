@@ -799,7 +799,108 @@ const leadershipTeamEffectivenessData = {
             correct: "a. Encouraging open communication"
         }
     ],
-    9: [],
+    9: [
+        {
+            question: "Which of the following is NOT a characteristic of Team Effectiveness as suggested by Larson & LaFasto (1989)?",
+            options: [
+                "a. Collaborative Climate",
+                "b. Competent Team Members",
+                "c. Shared Leadership",
+                "d. Standards of Excellence"
+            ],
+            correct: "c. Shared Leadership"
+        },
+        {
+            question: "Which of the following is NOT a symptom of ineffective teams?",
+            options: [
+                "a. High level of innovation",
+                "b. Confusion about assignments",
+                "c. Loss of production",
+                "d. Ineffective meetings"
+            ],
+            correct: "a. High level of innovation"
+        },
+        {
+            question: "Which of the following is NOT a leadership action that can improve environmental interface with the team?",
+            options: [
+                "a. Buffering team members from environmental distractions",
+                "b. Sharing relevant environmental information with the team",
+                "c. Collaborating (including, involving)",
+                "d. Negotiating upward to secure necessary resources for the team"
+            ],
+            correct: "c. Collaborating (including, involving)"
+        },
+        {
+            question: "What is the primary focus of the \"Team-Centered Decision-Making Model\"?",
+            options: [
+                "a. The leader makes all final decisions.",
+                "b. Team members are empowered to make decisions.",
+                "c. Decisions are made based on a strict hierarchy.",
+                "d. The model emphasizes individual contributions over team consensus."
+            ],
+            correct: "b. Team members are empowered to make decisions."
+        },
+        {
+            question: "Which of the following is NOT a key characteristic of virtual teams?",
+            options: [
+                "a. Reliance on electronic communication",
+                "b. Geographical dispersion of team members",
+                "c. Always focused on short-term projects",
+                "d. Can have members working at different times"
+            ],
+            correct: "c. Always focused on short-term projects"
+        },
+        {
+            question: "What is the main difference between \"Process Gain\" and \"Process Loss\" in team dynamics?",
+            options: [
+                "a. Process Gain focuses on individual performance, while Process Loss focuses on team performance.",
+                "b. Process Gain refers to exceeding expected team output, while Process Loss refers to underperforming compared to individual capabilities.",
+                "c. Process Gain is a measure of efficiency, while Process Loss is a measure of effectiveness.",
+                "d. Process Gain highlights the positive aspects of team conflict, while Process Loss focuses on the negative aspects."
+            ],
+            correct: "b. Process Gain refers to exceeding expected team output, while Process Loss refers to underperforming compared to individual capabilities."
+        },
+        {
+            question: "According to Hackman and Wageman, when is \"Motivational Coaching\" most effective in a team's life cycle?",
+            options: [
+                "a. At the beginning of a performance period",
+                "b. At the midpoint of a performance period",
+                "c. When performance activities have been completed",
+                "d. Throughout the entire performance period"
+            ],
+            correct: "a. At the beginning of a performance period"
+        },
+        {
+            question: "What is \"Deterrence-Based Trust\" primarily based on in the context of virtual teams?",
+            options: [
+                "a. Shared values and understanding",
+                "b. Consistent behavior and the threat of punishment",
+                "c. Long-term relationships and shared experiences",
+                "d. Open communication and mutual respect"
+            ],
+            correct: "b. Consistent behavior and the threat of punishment"
+        },
+        {
+            question: "Which team decision-making technique involves gathering expert opinions from geographically dispersed individuals without face-to-face interaction?",
+            options: [
+                "a. Brainstorming",
+                "b. Nominal Group Technique",
+                "c. Delphi Technique",
+                "d. Round Robin Technique"
+            ],
+            correct: "c. Delphi Technique"
+        },
+        {
+            question: "Which of the following is NOT a benefit of offsite training for team development?",
+            options: [
+                "a. Improved communication",
+                "b. Enhanced self-confidence",
+                "c. Increased cooperation",
+                "d. Guaranteed long-term behavioral change"
+            ],
+            correct: "d. Guaranteed long-term behavioral change"
+        }
+    ],
     10: [],
     11: [],
     12: []
