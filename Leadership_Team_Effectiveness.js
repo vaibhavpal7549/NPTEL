@@ -901,7 +901,304 @@ const leadershipTeamEffectivenessData = {
             correct: "d. Guaranteed long-term behavioral change"
         }
     ],
-    10: [],
-    11: [],
-    12: []
+    10: [
+        {
+            question: "At which MCOD stage does an organization actively welcome diverse candidates?",
+            options: [
+                "a. The Club",
+                "b. The Compliance Organization",
+                "c. The Affirming Organization",
+                "d. The Exclusionary Organization"
+            ],
+            correct: "c. The Affirming Organization"
+        },
+        {
+            question: "Role clarification in teams increases",
+            options: [
+                "a. Role ambiguity",
+                "b. Efficiency and mutual understanding",
+                "c. Competition among members",
+                "d. Disconnection in communication"
+            ],
+            correct: "b. Efficiency and mutual understanding"
+        },
+        {
+            question: "Which law emphasizes the importance of a shared goal over personal roles?",
+            options: [
+                "a. Law of the Bad Apple",
+                "b. Law of the Big Picture",
+                "c. Law of Communication",
+                "d. Law of Chain"
+            ],
+            correct: "b. Law of the Big Picture"
+        },
+        {
+            question: "The Kolb cycle includes which stage?",
+            options: [
+                "a. Abstract conceptualization",
+                "b. Programmed repetition",
+                "c. Isolated experimentation",
+                "d. Passive watching"
+            ],
+            correct: "a. Abstract conceptualization"
+        },
+        {
+            question: "Kolb's \"Converging\" learning style is associated with:",
+            options: [
+                "a. Watching only",
+                "b. Technical problem solving and active experimentation",
+                "c. Avoidance of new experiences",
+                "d. Ignoring group feedback"
+            ],
+            correct: "b. Technical problem solving and active experimentation"
+        },
+        {
+            question: "A key role in action learning teams is the:",
+            options: [
+                "a. Passive observer",
+                "b. Action learning coach guiding reflection and feedback",
+                "c. Group analyst",
+                "d. Isolated implementer"
+            ],
+            correct: "b. Action learning coach guiding reflection and feedback"
+        },
+        {
+            question: "The action learning cycle is inspired by",
+            options: [
+                "a. Plan-Do-Check-Act",
+                "b. Memorization cycle",
+                "c. Fixed feedback process",
+                "d. Non-collaborative routines"
+            ],
+            correct: "a. Plan-Do-Check-Act"
+        },
+        {
+            question: "The GAPS model stands for:",
+            options: [
+                "a. Guidance, Action, Performance, Strengths",
+                "b. Goals, Abilities, Perceptions, Standards",
+                "c. Growth, Autonomy, Planning, Success",
+                "d. General Aspirations, Professional Strategy"
+            ],
+            correct: "b. Goals, Abilities, Perceptions, Standards"
+        },
+        {
+            question: "Multicultural organizations integrate diversity at every level.",
+            options: [
+                "a. True",
+                "b. False"
+            ],
+            correct: "a. True"
+        },
+        {
+            question: "The affirmative stage in MCOD represents a commitment to __________ discriminatory practices.",
+            options: [
+                "a. Promoting",
+                "b. Ignoring",
+                "c. Eliminating",
+                "d. Standardizing"
+            ],
+            correct: "c. Eliminating"
+        }
+    ],
+    11: [
+        {
+            question: "Reverse mentoring is characterized by:",
+            options: [
+                "a. Junior employees mentoring seniors",
+                "b. Senior employees mentoring juniors",
+                "c. Only peer-to-peer exchanges",
+                "d. Mentoring external consultants"
+            ],
+            correct: "a. Junior employees mentoring seniors"
+        },
+        {
+            question: "Group mentoring involves",
+            options: [
+                "a. Only single mentor-single mentee pairs",
+                "b. Multiple mentors and collective mentees",
+                "c. No interaction within group",
+                "d. Training through lectures"
+            ],
+            correct: "b. Multiple mentors and collective mentees"
+        },
+        {
+            question: "Promotion of gender equity in the workplace involves",
+            options: [
+                "a. Pay secrecy",
+                "b. Regular pay audits and fairness",
+                "c. Restricting parental leave",
+                "d. Zero hiring reviews"
+            ],
+            correct: "b. Regular pay audits and fairness"
+        },
+        {
+            question: "The Companies Act, 2013, in India requires boards to",
+            options: [
+                "a. Include at least one woman on company boards",
+                "b. Ensure no female representation",
+                "c. Abolish board diversity",
+                "d. Repeat executive roles annually"
+            ],
+            correct: "a. Include at least one woman on company boards"
+        },
+        {
+            question: "Negative affectivity is correlated with",
+            options: [
+                "a. Greater satisfaction",
+                "b. Higher job dissatisfaction",
+                "c. Improved team dynamics",
+                "d. Positive behavioural outcomes"
+            ],
+            correct: "b. Higher job dissatisfaction"
+        },
+        {
+            question: "Speed mentoring is structured as",
+            options: [
+                "a. Single deep dive with one expert",
+                "b. Group-only dialogue",
+                "c. No feedback allowed",
+                "d. Brief conversations with several mentors"
+            ],
+            correct: "d. Brief conversations with several mentors"
+        },
+        {
+            question: "Boundary management in relationships primarily means",
+            options: [
+                "a. Finding balance in personal and professional interaction",
+                "b. Excessive time allocation for one colleague",
+                "c. Promoting gossip",
+                "d. Avoiding group activities"
+            ],
+            correct: "a. Finding balance in personal and professional interaction"
+        },
+        {
+            question: "Maslow's hierarchy of needs for followers includes",
+            options: [
+                "a. Ignoring achievement",
+                "b. Disregarding empowerment",
+                "c. Autocratic supervision",
+                "d. Satisfaction of individual goals and growth"
+            ],
+            correct: "d. Satisfaction of individual goals and growth"
+        },
+        {
+            question: "Workplace boundaries help balance relationships and productivity",
+            options: [
+                "a. True",
+                "b. False"
+            ],
+            correct: "a. True"
+        },
+        {
+            question: "Smooth __________ is a hallmark of conjunctive communication.",
+            options: [
+                "a. Isolation",
+                "b. Suppression",
+                "c. Disjointedness",
+                "d. Connection"
+            ],
+            correct: "d. Connection"
+        }
+    ],
+    12: [
+        {
+            question: "What happened with Coca-Cola's New Coke?",
+            options: [
+                "a. It was a sales disaster",
+                "b. It became more popular than Pepsi",
+                "c. It increased Coke's market share",
+                "d. It was introduced in 2020"
+            ],
+            correct: "a. It was a sales disaster"
+        },
+        {
+            question: "Which factor is external in the T7 Model?",
+            options: [
+                "a. Team leader fit",
+                "b. Talent",
+                "c. Trust",
+                "d. Task skills"
+            ],
+            correct: "a. Team leader fit"
+        },
+        {
+            question: "What is a major challenge of diverse teams?",
+            options: [
+                "a. Less shared knowledge initially",
+                "b. More conflict always",
+                "c. No need for inclusion",
+                "d. Homogeneous views"
+            ],
+            correct: "a. Less shared knowledge initially"
+        },
+        {
+            question: "Which is NOT one of the three development requirements for leadership development?",
+            options: [
+                "a. A supportive leader prioritizing development",
+                "b. An ambitious, committed candidate",
+                "c. A standard development process",
+                "d. High salary"
+            ],
+            correct: "d. High salary"
+        },
+        {
+            question: "What is one of the five key skills to develop others, according to Forbes?",
+            options: [
+                "a. Communication",
+                "b. Ignorance",
+                "c. Avoidance",
+                "d. Isolation"
+            ],
+            correct: "a. Communication"
+        },
+        {
+            question: "Which component is NOT part of credibility?",
+            options: [
+                "a. Competence",
+                "b. Caring",
+                "c. Character",
+                "d. Wealth"
+            ],
+            correct: "d. Wealth"
+        },
+        {
+            question: "\"Mission\" in the Rocket Model refers to",
+            options: [
+                "a. Shared purpose aligned with the team's tasks",
+                "b. Only the leader's objectives",
+                "c. Short-term assignments",
+                "d. Unstated goals"
+            ],
+            correct: "a. Shared purpose aligned with the team's tasks"
+        },
+        {
+            question: "Which is NOT a characteristic of the Six Cs for guiding behaviour?",
+            options: [
+                "a. Carelessness",
+                "b. Clarity",
+                "c. Coaching",
+                "d. Consequences"
+            ],
+            correct: "a. Carelessness"
+        },
+        {
+            question: "Giving feedback immediately after an event is generally more effective than waiting.",
+            options: [
+                "a. True",
+                "b. False"
+            ],
+            correct: "a. True"
+        },
+        {
+            question: "In the Rocket Model, __________ refers to commitment to team objectives.",
+            options: [
+                "a. Context",
+                "b. Buy-in",
+                "c. Talent",
+                "d. Mission"
+            ],
+            correct: "b. Buy-in"
+        }
+    ]
 };
